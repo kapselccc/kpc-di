@@ -2,6 +2,7 @@ package kpc.springframework.kpcdi;
 
 import kpc.springframework.kpcdi.controllers.GreetingsController;
 import kpc.springframework.kpcdi.controllers.GreetingsController2;
+import kpc.springframework.kpcdi.controllers.I18nController;
 import kpc.springframework.kpcdi.controllers.MyController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,6 +25,10 @@ public class KpcDiApplication {
 		System.out.println("------Greetings controller 2!");
 		GreetingsController2 greetingsController2 = (GreetingsController2) ctx.getBean("greetingsController2");
 		System.out.println(greetingsController2.getGreeting());
+
+		System.out.println("------Greetings I18Controller!");
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 	}
 
