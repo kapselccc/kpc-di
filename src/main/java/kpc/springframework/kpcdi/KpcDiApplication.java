@@ -14,8 +14,8 @@ public class KpcDiApplication {
 
 		ApplicationContext ctx = SpringApplication.run(KpcDiApplication.class, args);
 		MyController myController = (MyController) ctx.getBean("myController");
-		String greeting = myController.sayHello();
-		System.out.println(greeting);
+		System.out.println("------My controller!");
+		System.out.println(myController.sayHello());
 
 		System.out.println("------Greetings controller!");
 		GreetingsController greetingsController = (GreetingsController) ctx.getBean("greetingsController");

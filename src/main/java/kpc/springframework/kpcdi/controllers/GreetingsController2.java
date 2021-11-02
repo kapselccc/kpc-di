@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 public class GreetingsController2 {
 private final GreetingService greetingService;
 
+//Qualifier wskazuje jaki service będzie wybierany
     public GreetingsController2(@Qualifier("greetingServicePolish") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
