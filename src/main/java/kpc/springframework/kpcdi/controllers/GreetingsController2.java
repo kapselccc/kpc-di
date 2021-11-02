@@ -5,14 +5,13 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class GreetingsController {
+public class GreetingsController2 {
+private final GreetingService greetingService;
 
-    private final GreetingService greetingService;
-
-    public GreetingsController(@Qualifier("greetingServiceEnglish")GreetingService greetingService) {
+    public GreetingsController2(@Qualifier("greetingServicePolish") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
     public String getGreeting(){
-       return greetingService.getGreeting();
+        return greetingService.getGreeting();
     }
 }
